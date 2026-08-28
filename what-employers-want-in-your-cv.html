@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A practical guide for students and graduates on what employers want to see in a CV." />
+  <title>What Employers Want to See in Your CV | Career Starter Guide</title>
+  <style>
+    :root {
+      --navy: #102a43;
+      --blue: #176fc1;
+      --sky: #eaf6ff;
+      --green: #087f5b;
+      --mint: #e7f8f1;
+      --gold: #f4b942;
+      --cream: #fff8e8;
+      --red: #bd3b35;
+      --rose: #fff0ef;
+      --ink: #1f2937;
+      --muted: #5f6b7a;
+      --line: #d9e3ec;
+      --white: #ffffff;
+      --shadow: 0 12px 32px rgba(16, 42, 67, 0.10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: #f5f9fc;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+    .container { width: min(1050px, 100%); margin: 0 auto; }
+    .hero {
+      color: var(--white);
+      background: linear-gradient(135deg, #102a43 0%, #176fc1 58%, #087f5b 100%);
+      padding: 64px 20px 84px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 7px 13px;
+      border: 1px solid rgba(255,255,255,.4);
+      border-radius: 999px;
+      background: rgba(255,255,255,.10);
+      font-size: .84rem;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .brand-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--gold); }
+    h1, h2, h3 { line-height: 1.18; }
+    h1 { max-width: 790px; margin: 19px 0 16px; font-size: clamp(2.25rem, 5vw, 4.4rem); letter-spacing: -.035em; }
+    .hero p { max-width: 760px; margin: 0; color: rgba(255,255,255,.92); font-size: clamp(1.04rem, 2vw, 1.24rem); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 27px; }
+    .button { display: inline-block; border-radius: 10px; padding: 13px 18px; font-weight: 800; text-decoration: none; transition: .2s ease; }
+    .button:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.15); }
+    .button-primary { color: var(--navy); background: var(--gold); }
+    .button-secondary { color: var(--white); border: 1px solid rgba(255,255,255,.62); }
+    main { padding: 0 20px 56px; }
+    .lead {
+      position: relative;
+      margin-top: -37px;
+      padding: 28px;
+      border-radius: 18px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+    .lead p { margin: 0; font-size: 1.08rem; }
+    section { margin-top: 48px; }
+    .eyebrow { margin-bottom: 7px; color: var(--green); font-size: .8rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+    h2 { margin: 0 0 14px; color: var(--navy); font-size: clamp(1.65rem, 3vw, 2.35rem); }
+    h3 { margin: 0 0 9px; color: var(--navy); font-size: 1.17rem; }
+    .grid { display: grid; gap: 18px; }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .card { padding: 23px; border: 1px solid var(--line); border-radius: 16px; background: var(--white); box-shadow: 0 5px 15px rgba(16,42,67,.045); }
+    .card p:last-child, .card ul:last-child { margin-bottom: 0; }
+    .icon { display: grid; place-items: center; width: 42px; height: 42px; margin-bottom: 14px; border-radius: 12px; background: var(--sky); color: var(--blue); font-weight: 800; font-size: 1.2rem; }
+    ul { margin: 10px 0 0; padding-left: 20px; }
+    li { margin: 7px 0; }
+    .highlight { margin-top: 18px; padding: 21px 24px; border-left: 5px solid var(--green); border-radius: 0 14px 14px 0; background: linear-gradient(120deg, var(--mint), #f4fcf8); }
+    .highlight strong { color: var(--navy); }
+    .formula { margin-top: 16px; padding: 18px; border-radius: 13px; background: var(--navy); color: var(--white); font-weight: 800; text-align: center; font-size: 1.05rem; }
+    .example { margin-top: 15px; padding: 19px 21px; border-radius: 13px; background: var(--sky); border: 1px solid #cce7fa; }
+    .example p { margin: 0 0 10px; }
+    .example p:last-child { margin-bottom: 0; }
+    .before { color: var(--red); }
+    .after { color: var(--green); }
+    .skill-table { width: 100%; border-collapse: separate; border-spacing: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--white); }
+    .skill-table th, .skill-table td { padding: 15px 16px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    .skill-table th { background: var(--navy); color: var(--white); font-size: .96rem; }
+    .skill-table tr:last-child td { border-bottom: 0; }
+    .timeline { display: grid; gap: 12px; margin-top: 20px; }
+    .step { display: grid; grid-template-columns: 46px 1fr; gap: 15px; align-items: start; padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--white); }
+    .step-number { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: var(--blue); color: var(--white); font-weight: 800; }
+    .step p { margin: 5px 0 0; color: var(--muted); }
+    .avoid { padding: 24px; border: 1px solid #f2c2bd; border-radius: 16px; background: var(--rose); }
+    .avoid h2, .avoid h3 { color: #9d2f2a; }
+    .cv-box { padding: 24px; border: 2px dashed #88bfe7; border-radius: 16px; background: #f2faff; }
+    .cv-box pre { margin: 0; font: 600 .95rem/1.75 Consolas, Monaco, monospace; color: #173a5e; white-space: pre-wrap; }
+    .final-test { padding: 32px; border-radius: 18px; color: var(--white); background: linear-gradient(135deg, #087f5b, #176fc1); text-align: center; }
+    .final-test h2 { color: var(--white); }
+    .final-test p { max-width: 690px; margin: 0 auto; color: rgba(255,255,255,.94); font-size: 1.08rem; }
+    footer { padding: 28px 20px 40px; color: var(--muted); text-align: center; font-size: .92rem; }
+    footer strong { color: var(--navy); }
+    @media (max-width: 720px) {
+      .hero { padding: 46px 20px 70px; }
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+      .lead, .card, .avoid, .cv-box, .final-test { padding: 22px; }
+      .skill-table { font-size: .92rem; }
+      .skill-table th, .skill-table td { padding: 12px 11px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="brand"><span class="brand-dot"></span> Career Starter Guide</div>
+      <h1>What Employers Want to See in Your CV</h1>
+      <p>A practical guide for final-year students, graduates and early-career professionals who want their CV to earn serious attention.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#essentials">See the essentials</a>
+        <a class="button button-secondary" href="#final-test">Take the 20-second test</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="lead">
+        <p><strong>Employers are not looking for a perfect CV.</strong> They want evidence that you can do the job, learn quickly and behave professionally. Your CV should make it easy for them to see why you are relevant to <em>their</em> vacancy—not simply tell your life story.</p>
+      </div>
+
+      <section id="essentials">
+        <div class="eyebrow">The essentials</div>
+        <h2>Six things employers want to see</h2>
+        <div class="grid grid-3">
+          <article class="card"><div class="icon">1</div><h3>Clear contact details</h3><p>Your name, professional phone number, professional email, location and a strong LinkedIn profile where relevant.</p></article>
+          <article class="card"><div class="icon">2</div><h3>A clear direction</h3><p>A short summary that shows who you are, the role you want and the value you can offer.</p></article>
+          <article class="card"><div class="icon">3</div><h3>Relevant skills</h3><p>Technical and people skills that match the role, supported by real evidence in your experience.</p></article>
+          <article class="card"><div class="icon">4</div><h3>Evidence of responsibility</h3><p>Internships, projects, volunteering, leadership, NYSC, freelance work or community service that prove you can contribute.</p></article>
+          <article class="card"><div class="icon">5</div><h3>Results and achievements</h3><p>Examples of what you did well, what changed and how you created value for people or a team.</p></article>
+          <article class="card"><div class="icon">6</div><h3>Fit for this job</h3><p>A CV tailored to the employer’s actual job description, not one generic document sent everywhere.</p></article>
+        </div>
+      </section>
+
+      <section>
+        <div class="eyebrow">Start well</div>
+        <h2>1. Make contact details easy to find</h2>
+        <div class="grid grid-2">
+          <article class="card">
+            <h3>Include</h3>
+            <ul>
+              <li>Full name</li>
+              <li>Professional phone number</li>
+              <li>Professional email address</li>
+              <li>Location, such as Lagos, Abuja, Ibadan or “Available to relocate”</li>
+              <li>LinkedIn profile link, if it is well prepared</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Usually leave out</h3>
+            <ul>
+              <li>Religion, state of origin and marital status</li>
+              <li>Full home address and date of birth</li>
+              <li>Primary-school history</li>
+              <li>A photograph, unless specifically requested</li>
+              <li>Unprofessional email addresses</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="eyebrow">Make your direction clear</div>
+        <h2>2. Write a useful professional summary</h2>
+        <p>Use three or four lines to explain who you are, the role you want, your strongest relevant skills and the value you can bring.</p>
+        <div class="example">
+          <p><strong>Example:</strong></p>
+          <p>Final-year Economics student with experience supporting student events, handling enquiries and coordinating teams. Strong written communication, Excel and customer-service skills. Seeking an entry-level customer-support or operations role where I can learn quickly, support clients professionally and contribute to an organised team.</p>
+        </div>
+        <div class="highlight"><strong>Avoid generic claims:</strong> “I am hardworking, honest and a team player.” Show these qualities through examples instead.</div>
+      </section>
+
+      <section>
+        <div class="eyebrow">Show the skills</div>
+        <h2>3. Include skills employers can use</h2>
+        <p>Strong applicants show both technical/job skills and transferable people skills.</p>
+        <table class="skill-table">
+          <thead><tr><th>Technical / job skills</th><th>Transferable / people skills</th></tr></thead>
+          <tbody>
+            <tr><td>Microsoft Excel or Google Sheets</td><td>Clear communication</td></tr>
+            <tr><td>PowerPoint and report writing</td><td>Teamwork</td></tr>
+            <tr><td>Data entry and record keeping</td><td>Problem-solving</td></tr>
+            <tr><td>CRM or customer-support tools</td><td>Reliability and time management</td></tr>
+            <tr><td>Research, presentations and social-media support</td><td>Adaptability and professional conduct</td></tr>
+          </tbody>
+        </table>
+        <div class="highlight"><strong>Important:</strong> Do not only list a skill. Show where you used it. For example, if you say “Excel,” describe the tracker, report or record you created.</div>
+      </section>
+
+      <section>
+        <div class="eyebrow">Experience counts</div>
+        <h2>4. Show evidence—even if you have not held a full-time job</h2>
+        <p>Graduates are not expected to have ten years of experience. Employers want proof that you have taken responsibility, worked with people or completed useful work.</p>
+        <div class="grid grid-2">
+          <article class="card">
+            <h3>Include relevant experience such as:</h3>
+            <ul>
+              <li>Internships and industrial training</li>
+              <li>NYSC service or NYSC status</li>
+              <li>Volunteering and community service</li>
+              <li>Student leadership and campus projects</li>
+              <li>Research projects and practical coursework</li>
+              <li>Small business, freelance or tutoring work</li>
+              <li>Event planning and social-media support</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>How to write it</h3>
+            <p>Do not merely state your title. Describe the responsibility, the action you took and the result.</p>
+            <div class="example">
+              <p class="before"><strong>Weak:</strong> Assisted with an event.</p>
+              <p class="after"><strong>Better:</strong> Coordinated registration for a 200-person student event, responded to participant enquiries and maintained an attendance record using Google Sheets.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="eyebrow">Show results</div>
+        <h2>5. Turn duties into achievements</h2>
+        <p>Employers want to know not only what you were asked to do, but how well you performed.</p>
+        <div class="formula">Action verb + what you did + how / with whom + result</div>
+        <div class="grid grid-2" style="margin-top:18px;">
+          <article class="card"><h3>Examples with numbers</h3><ul><li>Responded to more than 30 customer enquiries weekly through WhatsApp and phone, helping reduce unanswered requests during peak periods.</li><li>Led a five-person student team to organise a career seminar attended by 150 students.</li><li>Supported onboarding for 25 new volunteers by preparing welcome materials and answering questions.</li></ul></article>
+          <article class="card"><h3>Examples without numbers</h3><ul><li>Created a step-by-step guide that simplified registration for new participants.</li><li>Resolved common participant enquiries by preparing a clear FAQ document.</li><li>Improved the organisation of project files by introducing a shared digital folder system.</li></ul></article>
+        </div>
+      </section>
+
+      <section>
+        <div class="eyebrow">Education and focus</div>
+        <h2>6. Present your education and training properly</h2>
+        <div class="grid grid-2">
+          <article class="card"><h3>Include</h3><ul><li>University/polytechnic and course of study</li><li>Expected graduation date if you are still studying</li><li>Degree class or CGPA if it strengthens your application</li><li>Relevant courses, certifications and practical training</li><li>Final-year project where it relates to the role</li></ul></article>
+          <article class="card"><h3>Example</h3><p><strong>B.Sc. Business Administration — University of [Name]</strong><br />Expected graduation: 2026<br />Relevant coursework: Customer Relationship Management, Business Communication, Operations Management.</p></article>
+        </div>
+      </section>
+
+      <section>
+        <div class="eyebrow">The most important rule</div>
+        <h2>Tailor your CV to the vacancy</h2>
+        <p>Do not use one unchanged CV for every job. Read the job advert and identify what the employer repeatedly asks for: skills, tasks, software, qualifications and behaviours.</p>
+        <div class="highlight"><strong>Example:</strong> For a customer-service role, the employer may want communication, complaint resolution, empathy, record keeping and computer skills. Your CV should truthfully show those qualities through your summary, skills and experience.</div>
+      </section>
+
+      <section>
+        <div class="avoid">
+          <div class="eyebrow" style="color:#9d2f2a;">Avoid these mistakes</div>
+          <h2>What employers do not want</h2>
+          <div class="grid grid-2">
+            <ul><li>A generic CV sent unchanged to every employer</li><li>Long paragraphs that are difficult to scan</li><li>Spelling and grammar mistakes</li><li>False qualifications or invented experience</li><li>Vague claims with no evidence</li></ul>
+            <ul><li>Irrelevant personal information</li><li>An unprofessional email address</li><li>Heavy graphics or too many colours for conventional applications</li><li>A CV longer than two pages for a student or early-career applicant</li><li>Dead links, missing contact details or outdated information</li></ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="eyebrow">A simple structure</div>
+        <h2>Use this CV format</h2>
+        <div class="cv-box"><pre>FULL NAME
+Phone | Professional email | Location | LinkedIn
+
+PROFESSIONAL SUMMARY
+Three to four targeted lines.
+
+KEY SKILLS
+Six to ten skills relevant to the role.
+
+EDUCATION
+University/polytechnic, programme, graduation date, relevant coursework/project.
+
+EXPERIENCE / PROJECTS / VOLUNTEERING
+Organisation | Role | Dates
+• Action + task + result
+• Action + task + result
+
+CERTIFICATIONS / TRAINING
+Relevant short courses, tools or credentials.
+
+LEADERSHIP / ADDITIONAL INFORMATION
+Student leadership, relevant volunteering, languages or interests.</pre></div>
+      </section>
+
+      <section id="final-test" class="final-test">
+        <h2>The 20-second CV test</h2>
+        <p>Before you send your CV, ask yourself: <strong>If a recruiter spends only 20 seconds on this page, can they see the role I want, the skills I offer and at least two examples that show I can contribute?</strong></p>
+      </section>
+    </div>
+  </main>
+
+  <footer><strong>Career Starter Guide</strong> &middot; A free practical resource for final-year students, graduates and early-career professionals.<br />Share this guide with someone preparing for work.</footer>
+</body>
+</html>
