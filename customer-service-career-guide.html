@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A practical Graduate to Impact guide to starting and growing a career in customer service." />
+  <title>Customer Service Career Guide | Graduate to Impact</title>
+  <style>
+    :root {
+      --navy: #102a43;
+      --blue: #1677c8;
+      --sky: #eaf6ff;
+      --green: #0b8f67;
+      --mint: #e7f8f1;
+      --orange: #f59e0b;
+      --cream: #fff9ed;
+      --ink: #1f2937;
+      --muted: #5f6b7a;
+      --line: #d9e3ec;
+      --white: #ffffff;
+      --shadow: 0 12px 32px rgba(16, 42, 67, 0.10);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #f5f9fc;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+
+    .hero {
+      color: var(--white);
+      background: linear-gradient(135deg, #102a43 0%, #126ab4 58%, #11a779 100%);
+      padding: 66px 20px 82px;
+    }
+
+    .container { width: min(1050px, 100%); margin: 0 auto; }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid rgba(255,255,255,.38);
+      border-radius: 999px;
+      padding: 7px 13px;
+      font-size: .86rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      font-weight: 700;
+      background: rgba(255,255,255,.10);
+    }
+
+    .brand-dot {
+      width: 10px;
+      height: 10px;
+      background: #ffd166;
+      border-radius: 50%;
+    }
+
+    h1, h2, h3 { line-height: 1.18; }
+    h1 {
+      max-width: 780px;
+      margin: 20px 0 16px;
+      font-size: clamp(2.2rem, 5vw, 4.5rem);
+      letter-spacing: -0.035em;
+    }
+
+    .hero p {
+      max-width: 740px;
+      margin: 0;
+      font-size: clamp(1.04rem, 2vw, 1.25rem);
+      color: rgba(255,255,255,.91);
+    }
+
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+    .button {
+      display: inline-block;
+      padding: 13px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.16); }
+    .button-primary { color: var(--navy); background: #ffd166; }
+    .button-secondary { color: var(--white); border: 1px solid rgba(255,255,255,.6); }
+
+    main { padding: 0 20px 56px; }
+    .intro-card {
+      background: var(--white);
+      margin-top: -37px;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+      position: relative;
+    }
+    .intro-card p { font-size: 1.08rem; margin: 0; }
+
+    section { margin-top: 48px; }
+    .section-label {
+      color: var(--green);
+      font-size: .8rem;
+      letter-spacing: .11em;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 7px;
+    }
+    h2 { color: var(--navy); font-size: clamp(1.65rem, 3vw, 2.35rem); margin: 0 0 14px; }
+    h3 { color: var(--navy); font-size: 1.18rem; margin: 0 0 9px; }
+
+    .grid { display: grid; gap: 18px; }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 23px;
+      box-shadow: 0 5px 15px rgba(16,42,67,.045);
+    }
+    .card p:last-child, .card ul:last-child { margin-bottom: 0; }
+    .icon {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 14px;
+      background: var(--sky);
+      color: var(--blue);
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 1.25rem;
+    }
+
+    ul { margin: 10px 0 0; padding-left: 20px; }
+    li { margin: 7px 0; }
+
+    .highlight {
+      background: linear-gradient(120deg, var(--mint), #f1fbf7);
+      border-left: 5px solid var(--green);
+      padding: 22px 24px;
+      border-radius: 0 14px 14px 0;
+      margin-top: 18px;
+    }
+    .highlight strong { color: var(--navy); }
+
+    .roles { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+    .tag {
+      background: var(--sky);
+      color: #13558d;
+      border: 1px solid #cce7fa;
+      border-radius: 999px;
+      padding: 8px 11px;
+      font-size: .92rem;
+      font-weight: 700;
+    }
+
+    .timeline { position: relative; display: grid; gap: 12px; margin-top: 22px; }
+    .step {
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      gap: 15px;
+      align-items: start;
+      padding: 18px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+    .step-number {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      color: var(--white);
+      background: var(--blue);
+      border-radius: 50%;
+      font-weight: 800;
+    }
+    .step p { margin: 5px 0 0; color: var(--muted); }
+
+    .warning {
+      background: var(--cream);
+      border: 1px solid #f4d084;
+      border-radius: 16px;
+      padding: 23px;
+    }
+    .warning h3 { color: #935b00; }
+
+    .quote {
+      color: var(--white);
+      background: var(--navy);
+      border-radius: 18px;
+      padding: 33px;
+      font-size: clamp(1.2rem, 2.5vw, 1.65rem);
+      font-weight: 700;
+      line-height: 1.45;
+    }
+    .quote span { display: block; color: #9ed9ff; margin-top: 12px; font-size: .98rem; font-weight: 400; }
+
+    .cta {
+      color: var(--white);
+      background: linear-gradient(135deg, #0b8f67, #1066a5);
+      border-radius: 18px;
+      padding: 34px;
+      text-align: center;
+    }
+    .cta h2 { color: var(--white); }
+    .cta p { max-width: 650px; margin: 0 auto 22px; color: rgba(255,255,255,.91); }
+
+    footer { padding: 28px 20px 40px; color: var(--muted); text-align: center; font-size: .93rem; }
+    footer strong { color: var(--navy); }
+
+    @media (max-width: 720px) {
+      .hero { padding: 46px 20px 70px; }
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+      .intro-card { padding: 22px; }
+      .card, .cta, .quote { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="brand"><span class="brand-dot"></span> Graduate to Impact</div>
+      <h1>Customer Service: A Career You Can Start—and Grow</h1>
+      <p>A practical guide for final-year students, graduates and NYSC corps members who want to build useful skills, earn experience and create a strong professional future.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#start">How to get started</a>
+        <a class="button button-secondary" href="#opportunities">Explore job opportunities</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="intro-card">
+        <p><strong>Customer service is the work of helping people before, during and after they use a product or service.</strong> It is more than answering calls. It means listening carefully, communicating clearly, solving problems and helping customers feel respected and supported.</p>
+      </div>
+
+      <section>
+        <div class="section-label">The basics</div>
+        <h2>What does customer service involve?</h2>
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="icon">1</div>
+            <h3>Listen and understand</h3>
+            <p>Hear the real issue, ask helpful questions and show the customer that you understand the concern.</p>
+          </article>
+          <article class="card">
+            <div class="icon">2</div>
+            <h3>Guide and resolve</h3>
+            <p>Give accurate information, process requests, manage complaints and take ownership of the next step.</p>
+          </article>
+          <article class="card">
+            <div class="icon">3</div>
+            <h3>Improve the experience</h3>
+            <p>Notice repeated problems and help an organisation improve the process—not only one customer’s case.</p>
+          </article>
+        </div>
+        <div class="highlight">
+          <strong>Simple example:</strong> A customer contacts an HMO because a hospital says authorisation has not arrived. A good service officer stays calm, confirms the details, explains the next step, follows up with the relevant team and keeps the customer informed until the matter is resolved.
+        </div>
+      </section>
+
+      <section id="opportunities">
+        <div class="section-label">Opportunity</div>
+        <h2>Where can customer service lead you?</h2>
+        <p>Every organisation that serves customers needs people who can communicate, coordinate and solve problems. This makes customer service a useful entry point into many industries.</p>
+        <div class="grid grid-2">
+          <article class="card">
+            <h3>Industries that hire</h3>
+            <ul>
+              <li>Banks, fintech companies and insurance firms</li>
+              <li>Hospitals, HMOs, pharmacies and health-tech businesses</li>
+              <li>Telecommunications and internet-service providers</li>
+              <li>E-commerce, retail, logistics and delivery companies</li>
+              <li>Hotels, airlines, travel and hospitality businesses</li>
+              <li>Schools, training organisations, NGOs and technology companies</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Job titles to search for</h3>
+            <div class="roles">
+              <span class="tag">Customer Service Representative</span>
+              <span class="tag">Customer Support Officer</span>
+              <span class="tag">Client Service Officer</span>
+              <span class="tag">Contact Centre Agent</span>
+              <span class="tag">Customer Success Associate</span>
+              <span class="tag">Customer Experience Officer</span>
+              <span class="tag">Chat Support Agent</span>
+              <span class="tag">Front Desk / Client Relations Officer</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-label">Is it for you?</div>
+        <h2>Who should consider customer service?</h2>
+        <div class="grid grid-2">
+          <article class="card">
+            <h3>You may enjoy it if you:</h3>
+            <ul>
+              <li>Like helping people and finding solutions</li>
+              <li>Can communicate politely and clearly</li>
+              <li>Are patient, calm and respectful under pressure</li>
+              <li>Can listen before rushing to respond</li>
+              <li>Want practical workplace experience and confidence</li>
+              <li>Want a foundation for operations, sales, HR, healthcare or management</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>You do not need to be loud</h3>
+            <p>You do not need to be the most outgoing person in the room. A thoughtful person who listens well, learns quickly, keeps records and follows through can become an excellent customer-service professional.</p>
+            <div class="highlight"><strong>Key attitude:</strong> Be helpful, but be professional. Empathy and good boundaries can exist together.</div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-label">Flexible work</div>
+        <h2>Can customer service be done online or part time?</h2>
+        <div class="grid grid-2">
+          <article class="card">
+            <div class="icon">⌂</div>
+            <h3>Yes, many roles are remote</h3>
+            <p>Online support can happen through phone calls, email, live chat, WhatsApp Business, social-media messages and help-desk systems.</p>
+            <p>You will usually need reliable internet, a quiet work area, good written English, a smartphone or laptop and the discipline to respond professionally.</p>
+          </article>
+          <article class="card">
+            <div class="icon">⌚</div>
+            <h3>It can be a side hustle during NYSC</h3>
+            <p>Part-time, evening, weekend or shift-based support work can be a good source of experience during youth service—provided it does not interfere with your primary assignment, community-development obligations or wellbeing.</p>
+            <p>Look for chat support, social-media support, WhatsApp order management, virtual-assistant tasks or short customer-onboarding projects.</p>
+          </article>
+        </div>
+        <div class="warning" style="margin-top:18px;">
+          <h3>Be careful</h3>
+          <p>Before accepting any role, confirm the employer, work hours, payment arrangement, required equipment and the exact responsibilities. Never pay money to secure a job, and do not use your personal bank account to receive customer payments for an employer.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-label">A real career</div>
+        <h2>You can become a customer-service expert</h2>
+        <p>Customer service can be the first step, not the final destination. As you become more skilled, you can move into customer experience, quality assurance, operations, customer success, training and leadership.</p>
+        <div class="timeline">
+          <div class="step"><div class="step-number">1</div><div><h3>Intern or Support Agent</h3><p>Learn the basics: product knowledge, communication, systems and professionalism.</p></div></div>
+          <div class="step"><div class="step-number">2</div><div><h3>Customer Service Representative</h3><p>Handle customer requests confidently and develop a track record of reliable performance.</p></div></div>
+          <div class="step"><div class="step-number">3</div><div><h3>Senior Officer, Quality Analyst or Customer Success Specialist</h3><p>Coach colleagues, solve complex cases and use customer feedback to improve service.</p></div></div>
+          <div class="step"><div class="step-number">4</div><div><h3>Team Lead, Supervisor or Customer Experience Manager</h3><p>Lead people, improve systems and make the customer experience part of business strategy.</p></div></div>
+          <div class="step"><div class="step-number">5</div><div><h3>Head of Customer Experience or Operations Leader</h3><p>Build a customer-focused culture across the organisation and influence how the business grows.</p></div></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-label">Learn from experts</div>
+        <h2>A well-known customer-service voice</h2>
+        <div class="grid grid-2">
+          <article class="card">
+            <h3>Shep Hyken</h3>
+            <p>Shep Hyken is a widely known customer-service and customer-experience author, speaker and adviser. His work focuses on customer loyalty, convenience and building customer-focused organisations.</p>
+            <p>His example shows that customer service can become a specialist profession: people can teach it, consult on it, lead it and help organisations grow through better experiences.</p>
+          </article>
+          <article class="card">
+            <h3>Skills that make you valuable</h3>
+            <ul>
+              <li>Clear speaking and professional writing</li>
+              <li>Active listening, empathy and calmness</li>
+              <li>Complaint handling and service recovery</li>
+              <li>Product knowledge and sound judgment</li>
+              <li>CRM, help-desk and digital communication tools</li>
+              <li>Using feedback and data to identify recurring problems</li>
+              <li>Teamwork, coaching and process improvement</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="start">
+        <div class="section-label">Take action</div>
+        <h2>How to get your first customer-service job</h2>
+        <div class="timeline">
+          <div class="step"><div class="step-number">1</div><div><h3>Build the basic skills</h3><p>Improve written English, telephone etiquette, email writing, Excel or Google Sheets, problem-solving and digital communication.</p></div></div>
+          <div class="step"><div class="step-number">2</div><div><h3>Create a customer-service CV</h3><p>Include student leadership, volunteering, tutoring, sales, event support, social-media work, NYSC activities or any experience helping people and resolving issues.</p></div></div>
+          <div class="step"><div class="step-number">3</div><div><h3>Learn one practical tool</h3><p>Start with WhatsApp Business and Google Workspace. Then learn the basics of a CRM or help-desk platform such as HubSpot, Zendesk or Freshdesk.</p></div></div>
+          <div class="step"><div class="step-number">4</div><div><h3>Prepare your interview examples</h3><p>Practise answering: “Tell me about a time you helped someone solve a problem.” Use a true example and explain the situation, action and result.</p></div></div>
+          <div class="step"><div class="step-number">5</div><div><h3>Search with the right words</h3><p>Use LinkedIn Jobs, Jobberman, employer career pages and reputable job boards. Search the job titles listed above.</p></div></div>
+          <div class="step"><div class="step-number">6</div><div><h3>Start small, then build proof</h3><p>Support a small business, volunteer at an event or help an organisation manage enquiries. Small experience can become strong evidence in your CV and interviews.</p></div></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="quote">“Customer service teaches you how organisations really work: what people value, where processes fail and how trust is built.”<span>Learn it well, and it can open doors far beyond the customer-service desk.</span></div>
+      </section>
+
+      <section class="cta">
+        <h2>Start building your career readiness</h2>
+        <p>Graduate to Impact helps graduates and early-career professionals build the practical skills, confidence and workplace readiness employers value.</p>
+        <a class="button button-primary" href="https://emlearning.io/gti/free">Access the free GTI course</a>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <strong>Graduate to Impact (GTI)</strong> &middot; Practical learning for graduates, job seekers and early-career professionals.<br />
+    Share this guide with someone preparing for work.
+  </footer>
+</body>
+</html>
