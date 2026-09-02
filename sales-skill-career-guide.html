@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The skill that will always be in demand: the ability to sell.">
+  <title>The Skill That Will Always Be in Demand: Selling</title>
+  <style>
+    :root {
+      --navy: #102b45;
+      --blue: #1e5c8f;
+      --sky: #eaf4fb;
+      --gold: #e4a33a;
+      --gold-pale: #fff3d8;
+      --ink: #1d2c39;
+      --muted: #617283;
+      --paper: #ffffff;
+      --line: #dbe5ed;
+      --bg: #f3f7fa;
+      --shadow: 0 18px 48px rgba(16, 43, 69, .13);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.65;
+    }
+
+    .hero {
+      padding: clamp(3.5rem, 9vw, 7rem) 1.25rem 4.5rem;
+      color: white;
+      background:
+        radial-gradient(circle at 83% 18%, rgba(228,163,58,.48), transparent 18rem),
+        radial-gradient(circle at 15% 92%, rgba(89,173,218,.25), transparent 24rem),
+        linear-gradient(130deg, #0b243b, #174f79 70%, #133d60);
+    }
+
+    .hero-inner { width: min(1050px, 100%); margin: 0 auto; }
+    .eyebrow {
+      margin: 0 0 .8rem;
+      color: #ffdb94;
+      font-family: Arial, sans-serif;
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 { line-height: 1.13; }
+    h1 {
+      max-width: 830px;
+      margin: 0;
+      font-size: clamp(2.45rem, 7vw, 5.25rem);
+      letter-spacing: -.05em;
+    }
+    .hero p:last-child {
+      max-width: 680px;
+      margin: 1.3rem 0 0;
+      color: rgba(255,255,255,.88);
+      font-size: clamp(1.08rem, 2.5vw, 1.3rem);
+    }
+
+    .layout {
+      width: min(1120px, calc(100% - 2rem));
+      margin: -2.5rem auto 4rem;
+      display: grid;
+      gap: 1.7rem;
+      grid-template-columns: 245px minmax(0, 1fr);
+      align-items: start;
+    }
+
+    .contents {
+      position: sticky;
+      top: 1.25rem;
+      padding: 1.25rem;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,.95);
+      box-shadow: 0 12px 30px rgba(16,43,69,.08);
+      font-family: Arial, sans-serif;
+    }
+    .contents h2 { margin: 0 0 .8rem; color: var(--navy); font-size: 1rem; }
+    .contents a {
+      display: block;
+      margin: .15rem 0;
+      padding: .58rem .7rem;
+      color: #41576a;
+      border-radius: 9px;
+      font-size: .87rem;
+      font-weight: 650;
+      line-height: 1.3;
+      text-decoration: none;
+    }
+    .contents a:hover { color: white; background: var(--blue); }
+
+    main {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .opening {
+      padding: clamp(1.8rem, 5vw, 4rem);
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(135deg, #fffdf8, #edf7fd);
+    }
+    .opening p { max-width: 720px; margin: 0; font-size: 1.16rem; }
+    .opening strong { color: var(--navy); }
+
+    .chapter { scroll-margin-top: 1.5rem; padding: clamp(1.7rem, 5vw, 3.7rem); }
+    .chapter + .chapter { border-top: 1px solid var(--line); }
+    .chapter-label {
+      margin: 0 0 .6rem;
+      color: var(--blue);
+      font-family: Arial, sans-serif;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .chapter h2 {
+      max-width: 760px;
+      margin: 0 0 1.1rem;
+      color: var(--navy);
+      font-size: clamp(1.85rem, 4vw, 2.85rem);
+      letter-spacing: -.035em;
+    }
+    .chapter p { max-width: 760px; margin: 0 0 1.25rem; font-size: 1.08rem; }
+    .chapter p:last-child { margin-bottom: 0; }
+
+    blockquote {
+      max-width: 740px;
+      margin: 1.8rem 0;
+      padding: 1.2rem 1.4rem;
+      color: var(--navy);
+      border-left: 5px solid var(--gold);
+      border-radius: 0 15px 15px 0;
+      background: var(--gold-pale);
+      font-size: 1.22rem;
+      font-style: italic;
+      font-weight: 700;
+      line-height: 1.48;
+    }
+
+    .cards { display: grid; gap: 1rem; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 1.5rem; }
+    .card {
+      padding: 1.2rem;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fcfeff;
+    }
+    .card h3 { margin: 0 0 .45rem; color: var(--navy); font-size: 1.16rem; }
+    .card p { margin: 0; color: #516577; font-size: .98rem; line-height: 1.55; }
+
+    .comparison { width: 100%; border-collapse: collapse; margin: 1.45rem 0 0; font-size: .98rem; }
+    .comparison th, .comparison td { padding: .9rem; border: 1px solid var(--line); vertical-align: top; text-align: left; }
+    .comparison th { color: white; background: var(--navy); font-family: Arial, sans-serif; font-size: .85rem; }
+    .comparison tr:nth-child(even) td { background: #f8fbfd; }
+
+    .list { max-width: 740px; margin: 1.15rem 0 0; padding-left: 1.25rem; }
+    .list li { margin: .62rem 0; padding-left: .25rem; font-size: 1.04rem; }
+    .list li::marker { color: var(--gold); font-weight: 800; }
+
+    .steps { display: grid; gap: .85rem; margin-top: 1.35rem; }
+    .step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: .9rem;
+      padding: 1rem;
+      border-radius: 13px;
+      background: #f1f7fb;
+    }
+    .number {
+      display: grid;
+      width: 44px;
+      height: 44px;
+      place-items: center;
+      color: white;
+      border-radius: 50%;
+      background: var(--blue);
+      font-family: Arial, sans-serif;
+      font-size: .9rem;
+      font-weight: 800;
+    }
+    .step h3 { margin: .1rem 0 .25rem; color: var(--navy); font-size: 1.12rem; }
+    .step p { margin: 0; color: #526779; font-size: .98rem; line-height: 1.5; }
+
+    .challenge {
+      padding: clamp(1.7rem, 5vw, 3.5rem);
+      color: white;
+      background: linear-gradient(135deg, #0e2d46, #1f6598);
+      text-align: center;
+    }
+    .challenge h2 { margin: 0 0 .9rem; font-size: clamp(1.9rem, 4vw, 2.8rem); }
+    .challenge p { max-width: 720px; margin: 0 auto 1.3rem; color: rgba(255,255,255,.88); font-size: 1.12rem; }
+    .challenge ul { display: inline-block; max-width: 680px; margin: 0; padding-left: 1.3rem; text-align: left; }
+    .challenge li { margin: .55rem 0; color: rgba(255,255,255,.94); }
+
+    footer {
+      padding: 1.6rem;
+      color: var(--muted);
+      background: #f7fafc;
+      font-family: Arial, sans-serif;
+      font-size: .77rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 850px) {
+      .layout { grid-template-columns: 1fr; }
+      .contents { position: relative; top: auto; display: flex; gap: .15rem; overflow-x: auto; white-space: nowrap; }
+      .contents h2 { display: none; }
+      .contents a { flex: 0 0 auto; }
+    }
+    @media (max-width: 600px) {
+      .layout { width: min(100% - 1rem, 1120px); margin-top: -1.25rem; }
+      main { border-radius: 17px; }
+      .cards { grid-template-columns: 1fr; }
+      .comparison { font-size: .9rem; }
+      .comparison th, .comparison td { padding: .68rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">A Career Skill Every Young Person Should Learn</p>
+      <h1>The Skill That Will Always Be in Demand: Selling</h1>
+      <p>You may not become a career salesperson—but if you want to succeed in work, business, leadership, or life, learn how to communicate value, build trust, and ask for commitment.</p>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="contents" aria-label="Chapters">
+      <h2>Read by chapter</h2>
+      <a href="#chapter-1">1. Nothing happens until somebody sells</a>
+      <a href="#chapter-2">2. Sales is not begging</a>
+      <a href="#chapter-3">3. Why sales will remain valuable</a>
+      <a href="#chapter-4">4. Why graduates should learn sales</a>
+      <a href="#chapter-5">5. Sales builds courage</a>
+      <a href="#chapter-6">6. Sell ethically</a>
+      <a href="#chapter-7">7. Start learning now</a>
+      <a href="#chapter-8">8. Choose the right environment</a>
+      <a href="#challenge">Your challenge</a>
+    </nav>
+
+    <main>
+      <section class="opening">
+        <p><strong>Many people look down on salespeople.</strong> They think selling is low-status, undignified, or only for people who could not find a “better” job. That thinking is wrong. Sales is one of the most useful, transferable, and income-producing skills anyone can develop.</p>
+      </section>
+
+      <section class="chapter" id="chapter-1">
+        <p class="chapter-label">Chapter 1</p>
+        <h2>Nothing Happens Until Somebody Sells</h2>
+        <p>No company, institution, charity, school, church, government agency, startup, manufacturer, bank, technology company, or professional-services firm can survive and grow without people who can sell.</p>
+        <p>A business can have an excellent product, brilliant engineers, skilled accountants, beautiful offices, and a powerful idea. But if it cannot persuade customers to buy, use, support, or invest in what it offers, it will eventually fail.</p>
+        <blockquote>Nothing happens until somebody sells.</blockquote>
+        <p>Sales creates revenue. Revenue pays salaries, funds innovation, keeps the lights on, supports expansion, and makes it possible for an organisation to continue serving people.</p>
+      </section>
+
+      <section class="chapter" id="chapter-2">
+        <p class="chapter-label">Chapter 2</p>
+        <h2>Sales Is Not Begging</h2>
+        <p>Real selling is not begging, manipulation, noise-making, or forcing people to buy what they do not need. Professional selling is the ability to understand a person’s problem and help them make a decision that genuinely serves them.</p>
+        <div class="cards">
+          <div class="card"><h3>Listen first</h3><p>Understand the customer’s situation before proposing a solution.</p></div>
+          <div class="card"><h3>Explain value</h3><p>Show clearly how the product or service solves a meaningful problem.</p></div>
+          <div class="card"><h3>Build trust</h3><p>Be honest, knowledgeable, dependable, and respectful.</p></div>
+          <div class="card"><h3>Guide a decision</h3><p>Help the customer choose the right next step without pressure or deception.</p></div>
+        </div>
+        <blockquote>“I understand the problem you are facing. Here is a solution. Here is why it will help you. Here is how we can make it work.”</blockquote>
+        <p>That is professional selling. It is valuable work—and it is useful far beyond a sales office.</p>
+      </section>
+
+      <section class="chapter" id="chapter-3">
+        <p class="chapter-label">Chapter 3</p>
+        <h2>Why Sales Will Remain Valuable</h2>
+        <p>Technology will change many tasks. Artificial intelligence can assist with research, writing, analysis, and customer outreach. But organisations will still need people who can understand human needs, establish credibility, negotiate, handle uncertainty, and build long-term relationships.</p>
+        <p>The form of selling will change, but the need to create revenue will not.</p>
+        <p>A shop salesperson, software salesperson, pharmaceutical representative, bank relationship manager, business-development executive, insurance adviser, real-estate consultant, and entrepreneur all sell differently. Yet each must understand people, communicate value, and earn trust.</p>
+        <blockquote>The higher the value and complexity of the problem you can help solve, the more valuable your ability to sell becomes.</blockquote>
+      </section>
+
+      <section class="chapter" id="chapter-4">
+        <p class="chapter-label">Chapter 4</p>
+        <h2>Why Graduates Should Learn Sales</h2>
+        <p>I believe many fresh graduates would benefit from spending their first one or two years in a serious sales or business-development role. This does not mean accepting every job that carries the word “sales.” It means choosing an environment where you can learn professional selling, customer service, product knowledge, relationship management, negotiation, and performance discipline.</p>
+        <p>Sales teaches lessons that classrooms often do not teach fully.</p>
+        <table class="comparison">
+          <thead><tr><th>What sales teaches</th><th>Why it matters in every career</th></tr></thead>
+          <tbody>
+            <tr><td>Communication</td><td>You learn to explain complex ideas simply and clearly.</td></tr>
+            <tr><td>Listening</td><td>You learn that understanding people comes before offering a solution.</td></tr>
+            <tr><td>Confidence</td><td>You learn to approach people, present ideas, and handle difficult conversations.</td></tr>
+            <tr><td>Resilience</td><td>You learn that rejection is feedback, not a verdict on your worth.</td></tr>
+            <tr><td>Commercial awareness</td><td>You understand how organisations make money and why customers choose one provider over another.</td></tr>
+            <tr><td>Accountability</td><td>You learn to prepare, follow up, measure results, and improve.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="chapter" id="chapter-5">
+        <p class="chapter-label">Chapter 5</p>
+        <h2>Sales Builds Courage</h2>
+        <p>Many people avoid sales because they are afraid of rejection. They do not want to hear “no.” They do not want to make calls, send messages, ask for meetings, make presentations, or follow up.</p>
+        <p>But sales teaches you that a “no” is often information—not a final judgement on you or your future.</p>
+        <ul class="list">
+          <li>It may mean: not now.</li>
+          <li>It may mean: I do not yet understand the value.</li>
+          <li>It may mean: I need more trust or more evidence.</li>
+          <li>It may mean: speak to another decision-maker.</li>
+          <li>It may mean: return with a better solution.</li>
+        </ul>
+        <p>The person who learns to face rejection without losing integrity develops courage that becomes useful throughout life.</p>
+      </section>
+
+      <section class="chapter" id="chapter-6">
+        <p class="chapter-label">Chapter 6</p>
+        <h2>Sell Ethically—or Do Not Sell at All</h2>
+        <p>Young people should never use sales as an excuse for deception. Do not sell what you know is harmful. Do not make promises you cannot keep. Do not misrepresent prices, results, risks, or your qualifications. Do not pressure vulnerable people.</p>
+        <p>The best salespeople build reputations that bring repeat customers and referrals.</p>
+        <div class="cards">
+          <div class="card"><h3>Believe in the value</h3><p>Sell products and services that can genuinely help the buyer.</p></div>
+          <div class="card"><h3>Know the limits</h3><p>Tell the truth about what your offer can—and cannot—do.</p></div>
+          <div class="card"><h3>Respect the customer</h3><p>Recommend the right option, even when it is not the most expensive one.</p></div>
+          <div class="card"><h3>Deliver after the sale</h3><p>Keep your word and remain available when customers need support.</p></div>
+        </div>
+        <blockquote>Trust is a salesperson’s greatest asset.</blockquote>
+      </section>
+
+      <section class="chapter" id="chapter-7">
+        <p class="chapter-label">Chapter 7</p>
+        <h2>Start Learning Sales Now</h2>
+        <p>You do not have to wait for a formal sales job. You can begin developing this skill today.</p>
+        <div class="steps">
+          <div class="step"><div class="number">01</div><div><h3>Communicate clearly</h3><p>Practise explaining a product, service, idea, or project in simple language. Ask: “What problem does this solve, for whom, and why should they choose it?”</p></div></div>
+          <div class="step"><div class="number">02</div><div><h3>Listen before you speak</h3><p>Ask thoughtful questions. Find out what the person is trying to achieve, what is difficult, and what a good solution would look like.</p></div></div>
+          <div class="step"><div class="number">03</div><div><h3>Know your offer</h3><p>Study the product, its benefits, limits, alternatives, price, and the problems it solves. You cannot sell confidently what you do not understand.</p></div></div>
+          <div class="step"><div class="number">04</div><div><h3>Ask for the next step</h3><p>Learn to ask respectfully for a meeting, demonstration, proposal, referral, trial, order, or payment.</p></div></div>
+          <div class="step"><div class="number">05</div><div><h3>Follow up professionally</h3><p>Keep records, deliver promised information, and follow up politely. Consistency is service, not harassment.</p></div></div>
+        </div>
+      </section>
+
+      <section class="chapter" id="chapter-8">
+        <p class="chapter-label">Chapter 8</p>
+        <h2>Choose the Right Sales Environment</h2>
+        <p>Not all sales roles are equal. Seek legitimate organisations with credible products, real training, clear compensation, and work that builds transferable skills.</p>
+        <p>Good places to develop professionally can include technology and software, banking and financial services, insurance, business-to-business services, professional services, healthcare, telecommunications, logistics, education, manufacturing, and credible real-estate organisations.</p>
+        <p>Where possible, choose a role that teaches more than making random calls or standing at a counter. Look for opportunities to learn customer discovery, presentations, account management, proposal writing, negotiation, and relationship-building.</p>
+      </section>
+
+      <section class="challenge" id="challenge">
+        <h2>Your Challenge</h2>
+        <p>Do not say, “I am not a salesperson,” as if selling is beneath you. Learn the skill—not to manipulate people, but to create value, build trust, solve problems, and open doors.</p>
+        <ul>
+          <li>Can I clearly explain the value I bring to an employer or customer?</li>
+          <li>What problem can I solve for someone else?</li>
+          <li>Can I approach people, ask questions, listen, and follow up?</li>
+          <li>What product, service, or idea can I practise selling this month?</li>
+          <li>Would I be willing to spend one or two years learning the discipline of sales?</li>
+        </ul>
+      </section>
+
+      <footer>Learn to sell ethically. Learn to create value. Learn to open doors.</footer>
+    </main>
+  </div>
+</body>
+</html>
